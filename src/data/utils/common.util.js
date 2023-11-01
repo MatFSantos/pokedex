@@ -1,0 +1,1 @@
+// funções de utilidade geral para o projeto.
