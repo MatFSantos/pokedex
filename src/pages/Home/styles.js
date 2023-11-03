@@ -30,3 +30,11 @@ export const Title = styled('h1')`
     }
     text-align: center;
 `;
+
+export const PokedexGrid = styled('div')`
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+    grid-template-columns: repeat(4,1fr);
+`
