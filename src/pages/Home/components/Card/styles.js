@@ -3,23 +3,26 @@ import { styled } from "@mui/material";
 export const CardContainer = styled('div')`
     padding: 1rem;
     height: 100%;
-    cursor: pointer;
 `;
 
-export const CardContent = styled('div')`
-    background-color: #48d0b0;
-    color: #fff;
-    box-shadow: 0 0 20px 0 #48d0b0;
-    border-radius: 3rem;
-    overflow: hidden;
-    height: 100%;
-    padding: 3rem 1rem 3rem 3rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    will-change: box-shadow,transform;
-    transition: all .3s;
+export const CardContent = styled("div")`
+  background-color: ${(props) => props.colorBg};
+  color: #fff;
+  box-shadow: 0 0 20px 0 ${(props) => props.colorBg};
+  border-radius: 3rem;
+  overflow: hidden;
+  height: 80%;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  will-change: box-shadow, transform;
+  transition: all 0.3s;
+  cursor: pointer;
+  :hover {
+    transform: scale(1.07);
+  }
 `;
 
 export const BackgroundPokeball = styled ('div')`
@@ -49,12 +52,56 @@ export const BackgroundPokeball = styled ('div')`
         position: absolute;
         width: 5em;
         padding-bottom: 5em;
-        background-color: #48d0b0;
+        background-color: hsla(0,0%,100%,.2);
     }
 `
-export const PokemonId = styled ('span')`
-`
-export const CardTitle = styled ('div')`
-`
-export const PokemonImage = styled ('div')`
-`
+export const PokemonId = styled("span")`
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 2.5rem;
+  color: hsla(0, 0%, 100%, 0.2);
+`;
+
+export const CardTitle = styled("div")`
+  align-self: flex-start;
+
+  > h2 {
+    text-transform: capitalize;
+    margin: 0;
+    font-size: 2rem;
+  }
+`;
+
+
+export const Types = styled("div")`
+  margin-top: 1rem;
+
+  > span {
+    border-radius: 100rem;
+    display: table;
+    background-color: hsla(0, 0%, 100%, 0.2);
+    padding: 0.3rem 0.7rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+  }
+`;
+
+export const PokemonImage = styled("div")`
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 50%;
+
+  > img {
+    max-width: 100%;
+    max-height: 100%;
+    -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+
+    overflow-clip-margin: content-box;
+    overflow: clip;
+  }
+`;

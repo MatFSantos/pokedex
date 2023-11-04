@@ -3,9 +3,9 @@ import { API_URL } from '../store/config';
 
 const ApiService = axios.create({
   baseURL: API_URL,
-  withCredentials: true,
+  withCredentials: false,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
