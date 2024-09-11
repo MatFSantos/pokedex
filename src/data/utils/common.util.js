@@ -1,14 +1,14 @@
 // funções e constantes de utilidade geral para o projeto.
 
 export const generations = {
-    I: { limit: 151, offset: 0},
-    II: { limit: 100, offset: 151},
-    III: { limit:135, offset: 251},
-    IV: { limit: 107, offset: 386},
-    V: { limit: 156, offset: 493},
-    VI: { limit: 72, offset: 649},
-    VII: { limit: 88, offset: 721},
-    VIII: { limit: 89, offset: 809}
+  I: { limit: 151, offset: 0},
+  II: { limit: 100, offset: 151},
+  III: { limit:135, offset: 251},
+  IV: { limit: 107, offset: 386},
+  V: { limit: 156, offset: 493},
+  VI: { limit: 72, offset: 649},
+  VII: { limit: 88, offset: 721},
+  VIII: { limit: 89, offset: 809}
 };
 export const typeColors = {
   bug: "#94BC4A",
